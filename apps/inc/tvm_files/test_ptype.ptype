@@ -1,0 +1,12 @@
+[
+    {
+        "typeName":"Struct_Temp",
+        "headerFileName":"TempStructDef.h",
+
+        "members":
+        [
+            {"name":"temperature","type":"uint8_t"}
+        ]
+    }
+]
+
