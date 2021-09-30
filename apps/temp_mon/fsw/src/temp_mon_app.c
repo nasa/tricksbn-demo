@@ -88,6 +88,11 @@ void TEMP_MON_AppMain( void )
                     if ( temp_tlm == NULL) continue;
                     //OS_printf( "\e[32m***** TEMP_MON *****\e[39m Received MID 0x%04X, Temp %.2f\n",msgId,temp_tlm->temperature );
                     OS_printf( "\e[32m***** TEMP_MON *****\e[39m Received MID 0x%04X, Temp %d\n",msgId,temp_tlm->temperature );
+                    int ii =0;
+                    for (;ii<16;ii++) {
+                        OS_printf( "\e[32m%02X \e[39m",temp_tlm->cfsHeader[ii]);
+                    }
+                    OS_printf( "\n\e[32m%02X\e[39m\n",temp_tlm->temperature );
 
                     //Send reset command to tvsio to send to the sim
                     if ( temp_tlm->temperature > 10 && g_TEMP_MON_AppData.tempOutMsg.reset_flag == 0 ) {
