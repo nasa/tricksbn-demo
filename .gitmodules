@@ -1,3 +1,4 @@
 [submodule "trick_sims"]
 	path = trick_sims
-	url = git@esgl-gitlab.jsc.nasa.gov:tricksbn/tricksbn.git
+	url = git@github.com:nasa/tricksbn.git
+	branch = demo_dev
